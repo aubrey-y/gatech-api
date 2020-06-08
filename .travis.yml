@@ -1,0 +1,6 @@
+language: java
+sudo: true
+jdk: oraclejdk12
+
+before_install:
+  - chmod +x mvnw
