@@ -1,5 +1,10 @@
 package xyz.gatechapi.rest.dao;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@NoArgsConstructor
 public class Email {
 
     private String email;
