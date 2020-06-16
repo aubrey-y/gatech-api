@@ -10,7 +10,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@master
@@ -28,5 +28,5 @@ jobs:
       with:
         app-name: 'gatech-rest'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_da8b738a7f8d4210ac4c4e4c5c241b04 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_01892e0fd72e41699b762654d5c2b037 }}
         package: '${{ github.workspace }}/target/*.jar'
