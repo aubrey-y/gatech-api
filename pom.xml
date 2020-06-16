@@ -34,24 +34,6 @@
         </dependency>
 
         <dependency>
-            <groupId>com.google.endpoints</groupId>
-            <artifactId>endpoints-framework</artifactId>
-            <version>${endpoints.framework.version}</version>
-        </dependency>
-        <!-- [START api_management] -->
-        <dependency>
-            <groupId>com.google.endpoints</groupId>
-            <artifactId>endpoints-management-control-appengine-all</artifactId>
-            <version>1.0.12</version>
-        </dependency>
-        <!-- [END api_management] -->
-        <dependency>
-            <groupId>com.google.appengine</groupId>
-            <artifactId>appengine-api-1.0-sdk</artifactId>
-            <version>1.9.80</version>
-        </dependency>
-
-        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
@@ -85,27 +67,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>com.google.cloud.tools</groupId>
-                <artifactId>appengine-maven-plugin</artifactId>
-                <version>2.2.0</version>
-                <configuration>
-                    <!-- deploy configuration -->
-                    <projectId>GCLOUD_CONFIG</projectId>
-                    <version>GCLOUD_CONFIG</version>
-                </configuration>
-            </plugin>
-            <!-- [START endpoints_plugin] -->
-            <plugin>
-                <groupId>com.google.cloud.tools</groupId>
-                <artifactId>endpoints-framework-maven-plugin</artifactId>
-                <version>2.0.1</version>
-                <configuration>
-                    <!-- plugin configuration -->
-                    <hostname>${endpoints.project.id}.appspot.com</hostname>
-                    <basePath>/api</basePath>
-                </configuration>
             </plugin>
         </plugins>
     </build>

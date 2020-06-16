@@ -28,9 +28,9 @@ before_install:
 install:
   - gcloud config set project $PROJECT_ID
 
-script:
-  - if [ "$TRAVIS_BRANCH" == "master" ];
-      then bash mvn_setup.sh;
-      gcloud endpoints services deploy target/openapi-docs/openapi.json;
-      mvn appengine:deploy;
-    fi
+#script:
+#  - if [ "$TRAVIS_BRANCH" == "master" ];
+#      then bash mvn_setup.sh;
+#      gcloud endpoints services deploy target/openapi-docs/openapi.json;
+#      mvn appengine:deploy;
+#    fi
