@@ -28,5 +28,5 @@ jobs:
       with:
         app-name: 'gatech-rest'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_da8b738a7f8d4210ac4c4e4c5c241b04 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_899d019fbe15488a9b162448744a9d00 }}
         package: '${{ github.workspace }}/target/*.jar'
