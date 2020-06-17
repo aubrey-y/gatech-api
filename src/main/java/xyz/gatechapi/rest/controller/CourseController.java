@@ -9,7 +9,7 @@ import xyz.gatechapi.rest.dto.Course;
 
 
 @Controller
-@RequestMapping("/courseapi/v1")
+@RequestMapping("/api/v1")
 public class CourseController {
 
     @GetMapping("/courses")
