@@ -26,7 +26,7 @@ before_install:
     - chmod +x mvnw
 
 install:
-  - gcloud config set project $GOOGLE_CLOUD_PROJECT
+  - gcloud config set project $DEPLOY_PROJECT_ID
 
 script:
   - if [ "$TRAVIS_BRANCH" == "master" ];
