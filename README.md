@@ -24,6 +24,6 @@ For local development, you will need to:
 
 5. Access API at [localhost:8080/api/v1](http://localhost:8080/api/v1)
 
-6. Access Swagger UI at [localhost:8080/swagger-ui.html](localhost:8080/swagger-ui.html)
+6. Access Swagger UI at [localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
 
 7. Deploy to Google App Engine via `mvn appengine:deploy`
