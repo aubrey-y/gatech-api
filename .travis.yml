@@ -26,11 +26,10 @@ before_install:
     - chmod +x mvnw
 
 install:
-  - gcloud config set project $PROJECT_ID
+  - gcloud config set project $GOOGLE_CLOUD_PROJECT
 
-#script:
-#  - if [ "$TRAVIS_BRANCH" == "master" ];
-#      then bash mvn_setup.sh;
-#      gcloud endpoints services deploy target/openapi-docs/openapi.json;
-#      mvn appengine:deploy;
-#    fi
+script:
+  - if [ "$TRAVIS_BRANCH" == "master" ];
+      then bash mvn_setup.sh;
+      mvn appengine:deploy;
+    fi

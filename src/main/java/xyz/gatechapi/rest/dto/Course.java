@@ -1,11 +1,11 @@
 package xyz.gatechapi.rest.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.google.cloud.Timestamp;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -19,7 +19,7 @@ public class Course {
 
     private int id;
 
-    private LocalDateTime lastUpdated;
+    private Timestamp last_updated;
 
     private String name;
 
@@ -29,5 +29,10 @@ public class Course {
 
     private Seats seats;
 
-    private Seats waitlistSeats;
+    private Seats waitlist;
+
+    @JsonProperty("lastUpdated")
+    public String getLast_updated() {
+        return this.last_updated.toString();
+    }
 }
