@@ -30,6 +30,5 @@ install:
 
 script:
   - if [ "$TRAVIS_BRANCH" == "master" ];
-      then bash mvn_setup.sh;
-      mvn appengine:deploy;
+      then mvn package appengine:deploy;
     fi
