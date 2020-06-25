@@ -1,11 +1,11 @@
 
 .                     |.
 :--------------------:|:--------------------:
-![GTCC](docs/gt.png)  |![GCP](docs/azure_gcp.png)
+![GTCC](docs/gt.png)  |![GCP](docs/aws_gcp.png)
 
 # gatech-api
 
-Spring Boot REST API deployed to Google App Engine B1 and managed by Azure API Management.
+Spring Boot REST API deployed to Google App Engine B1 and managed by AWS API Gateway.
 
 [![Build Status](https://travis-ci.org/aubrey-y/gatech-api.svg?branch=master)](https://travis-ci.org/aubrey-y/gatech-api)
 ![GitHub top language](https://img.shields.io/github/languages/top/aubrey-y/gatech-api)
