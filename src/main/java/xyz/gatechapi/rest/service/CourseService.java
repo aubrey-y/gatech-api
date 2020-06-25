@@ -5,6 +5,7 @@ import com.google.cloud.firestore.QueryDocumentSnapshot;
 import org.springframework.stereotype.Service;
 import xyz.gatechapi.rest.dto.Course;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
@@ -19,9 +20,9 @@ public class CourseService {
         this.firestore = firestore;
     }
 
-    public Map<String, Object> findAllCourses() {
+    public Map<String, Course> findAllCourses() {
         try {
-            return this.firestore.collection("CLASSES_ALL")
+            Map<String, Object> queryResults = this.firestore.collection("CLASSES_ALL")
                     .get()
                     .get()
                     .getDocuments()
@@ -29,6 +30,7 @@ public class CourseService {
                     .map(QueryDocumentSnapshot::getData)
                     .collect(Collectors.toList())
                     .get(0);
+            return (Map<String, Course>) new HashMap(queryResults);
         }
         catch (ExecutionException | InterruptedException e) {
             return null;

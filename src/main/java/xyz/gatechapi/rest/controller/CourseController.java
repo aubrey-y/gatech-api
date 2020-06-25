@@ -23,8 +23,8 @@ public class CourseController {
     }
 
     @GetMapping("/courses/all")
-    public ResponseEntity<Map<String, Object>> getAllCourses() {
-        Map<String, Object> courses = this.courseService.findAllCourses();
+    public ResponseEntity<Map<String, Course>> getAllCourses() {
+        Map<String, Course> courses = this.courseService.findAllCourses();
         if(courses != null) {
             return new ResponseEntity<>(courses, HttpStatus.OK);
         }
