@@ -1,5 +1,6 @@
 package xyz.gatechapi.rest.service;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.cloud.firestore.Firestore;
 import com.google.cloud.firestore.QueryDocumentSnapshot;
 import org.springframework.stereotype.Service;
@@ -30,7 +31,10 @@ public class CourseService {
                     .map(QueryDocumentSnapshot::getData)
                     .collect(Collectors.toList())
                     .get(0);
-            return (Map<String, Course>) new HashMap(queryResults);
+            Map<String, Course> castedResults = new HashMap<>();
+            queryResults.keySet()
+                    .forEach((String key) -> castedResults.put(key, new ObjectMapper().convertValue(queryResults.get(key), Course.class)));
+            return castedResults;
         }
         catch (ExecutionException | InterruptedException e) {
             return null;
