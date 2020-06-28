@@ -28,8 +28,9 @@ before_install:
 install:
   - gcloud config set project $DEPLOY_PROJECT_ID
 
-script:
-  - if [ "$TRAVIS_BRANCH" == "master" ];
-      then bash mvn_setup.sh;
-      mvn appengine:deploy;
-    fi
+# deploy currently breaks the app so disabled for now - manual deploys should suffice until the root cause is determined
+#script:
+#  - if [ "$TRAVIS_BRANCH" == "master" ];
+#      then bash mvn_setup.sh;
+#      mvn appengine:deploy;
+#    fi
