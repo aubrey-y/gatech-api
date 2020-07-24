@@ -5,7 +5,7 @@
 
 # gatech-api
 
-Spring Boot REST API deployed to Google App Engine B1 and managed by AWS API Gateway.
+Spring Boot REST API deployed to Google App Engine F1 and managed by AWS API Gateway.
 
 [![Build Status](https://travis-ci.org/aubrey-y/gatech-api.svg?branch=master)](https://travis-ci.org/aubrey-y/gatech-api)
 ![GitHub top language](https://img.shields.io/github/languages/top/aubrey-y/gatech-api)
