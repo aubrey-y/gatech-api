@@ -16,10 +16,10 @@ For local development, you will need to:
 
 1. Install Java 11 and Maven 3.6.3
 
-2. Provision Backendless Project and set up `BACKENDLESS_APPLICATION_ID` and `BACKENDLESS_API_KEY` environment variables
+2. Provision Backendless Project and export `BACKENDLESS_APPLICATION_ID` and `BACKENDLESS_API_KEY` environment variables
 
 3. Install [gcloud sdk](https://cloud.google.com/sdk/docs/downloads-interactive#linux), run `gcloud init`, and select
-the correct project (this is so `GCLOUD_CONFIG` in `pom.xml` actually refers to something)
+the correct project
 
 4. Run `mvn clean install` and `mvn spring-boot:run`
 
@@ -27,4 +27,4 @@ the correct project (this is so `GCLOUD_CONFIG` in `pom.xml` actually refers to 
 
 6. Access Swagger UI at [localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
 
-7. Deploy to Google App Engine via `mvn appengine:deploy`
+7. Deploy to Google App Engine via `envsubst` (details in .travis.yml) and `gcloud app deploy app.yaml --quiet`
